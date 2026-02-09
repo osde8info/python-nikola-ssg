@@ -1,6 +1,5 @@
-# Sample workflow for building and deploying a Nikola site to GitHub Pages
 #
-# To get started with mdBook see: https://rust-lang.github.io/mdBook/index.html
+# Sample workflow for building and deploying a Nikola site to GitHub Pages
 #
 name: nikola
 
@@ -35,17 +34,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: install1
-        run: pip install nikola
-
-      - name: install2
-        run: pip install pyphen
+      - name: Install1
+        run: |
+          pip install nikola
+          pip install pyphen
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: build1
+      - name: Build1
         run: nikola build
 
       - name: Upload artifact
