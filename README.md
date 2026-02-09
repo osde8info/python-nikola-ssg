@@ -1,6 +1,6 @@
 # python nikola ssg
 
-nikola (prent proj)
+nikola (parent proj)
 
 [![PyPI Downloads](https://static.pepy.tech/personalized-badge/nikola?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/nikola)
 
