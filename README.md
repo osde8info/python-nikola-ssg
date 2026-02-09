@@ -10,18 +10,33 @@ this proj
 
 This folder contains the source used to generate a static site using Nikola.
 
-Installation and documentation at https://getnikola.com/
+Installation and documentation at [https://getnikola.com/](https://getnikola.com/)
 
 Configuration file for the site is ``conf.py``.
 
+## install
+
+```bash
+pipx install nikola
+pipx runpip nikola install Jinja2
+```
+
+## build
+
 To build the site::
 
-    nikola build
+```bash
+nikola build
+```
 
 To check it::
 
-    nikola check -l
+```bash
+nikola check -l
+```
 
 To see it::
 
-    nikola serve -b
+```bash
+nikola serve -b
+```
