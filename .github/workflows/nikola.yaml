@@ -7,7 +7,7 @@ name: nikola
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: ["main","dev"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,17 +28,26 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+
     env:
-      MDBOOK_VERSION: 0.4.36
+      MDBOOK_VERSION: 26.2.2
+
     steps:
       - uses: actions/checkout@v4
-      - name: install
+
+      - name: install1
         run: pip install nikola
+
+      - name: install2
+        run: pip install pyphen
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with nikola
+
+      - name: build1
         run: nikola build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -49,8 +58,11 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
     needs: build
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

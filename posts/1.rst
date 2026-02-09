@@ -18,6 +18,10 @@ and build a site using it. Congratulations!
 Next steps:
 
 * :doc:`Read the manual <handbook>`
+* :doc:`About <about-nikola>`
+* :doc:`About2 <about-nikola2>`
+* :doc:`About3 <about-nikola3>`
+
 * `Visit the Nikola website to learn more <https://getnikola.com>`__
 * `See a demo photo gallery <link://gallery/demo>`__
 * :doc:`See a demo listing <listings-demo>`
